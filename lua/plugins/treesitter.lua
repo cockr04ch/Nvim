@@ -2,6 +2,7 @@ return {
   -- Syntax highlighting
   {
     "nvim-treesitter/nvim-treesitter",
+    event = { "BufReadPre", "BufNewFile" },
     build = ":TSUpdate",
     config = function()
       require("nvim-treesitter.configs").setup({

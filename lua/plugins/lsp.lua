@@ -2,6 +2,7 @@ return {
   -- LSP (Language Server Protocol) support
   {
     "neovim/nvim-lspconfig",
+    event = { "BufReadPre", "BufNewFile" },
     config = function()
       -- Setup language servers
       local lspconfig = require("lspconfig")

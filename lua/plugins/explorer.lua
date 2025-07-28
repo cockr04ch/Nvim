@@ -8,6 +8,9 @@ return {
       "nvim-tree/nvim-web-devicons",
       "MunifTanjim/nui.nvim",
     },
+    keys = {
+      { "<leader>e", ":Neotree toggle<CR>", desc = "Toggle Neo-tree" }
+    },
     config = function()
       -- Configure Neo-tree to appear on the right side
       require("neo-tree").setup({
@@ -16,9 +19,6 @@ return {
           width = 30
         },
       })
-      
-      -- Set up keybinding for <leader>e to toggle Neo-tree
-      vim.keymap.set("n", "<leader>e", ":Neotree toggle<CR>", { desc = "Toggle Neo-tree" })
     end,
   },
 }
