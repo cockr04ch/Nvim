@@ -6,8 +6,9 @@ return {
       -- Setup language servers
       local lspconfig = require("lspconfig")
       
-      -- Example for setting up a language server (you can add more as needed)
+      -- Example for setting up language servers (you can add more as needed)
       lspconfig.lua_ls.setup({})
+      lspconfig.clangd.setup({})
       
       -- Global mappings
       vim.keymap.set('n', '<space>e', vim.diagnostic.open_float)
