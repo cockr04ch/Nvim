@@ -14,6 +14,7 @@ return {
     config = function()
       -- Configure Neo-tree to appear on the right side
       require("neo-tree").setup({
+        close_if_last_window = true,
         window = {
           position = "right",
           width = 30
