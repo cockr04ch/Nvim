@@ -11,6 +11,7 @@ return {
       lspconfig.lua_ls.setup({})
       lspconfig.clangd.setup({})
       lspconfig.rust_analyzer.setup({})
+      lspconfig.ts_ls.setup({})
       
       -- Global mappings
       vim.keymap.set('n', '<space>e', vim.diagnostic.open_float)

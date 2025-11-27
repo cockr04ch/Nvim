@@ -9,7 +9,7 @@ return {
       "MunifTanjim/nui.nvim",
     },
     keys = {
-      { "<leader>e", ":Neotree toggle<CR>", desc = "Toggle Neo-tree" }
+      { "<leader>m", ":Neotree toggle<CR>", desc = "Toggle Neo-tree", silent=true }
     },
     config = function()
       -- Configure Neo-tree to appear on the right side
@@ -18,6 +18,27 @@ return {
         window = {
           position = "right",
           width = 30
+        },
+        -- AÑADE ESTA SECCIÓN para detección automática de cambios
+        filesystem = {
+          use_libuv_file_watcher = true, -- Detector de cambios del sistema
+          follow_current_file = {
+            enabled = true, -- Sigue el archivo actual
+          },
+          refresh = {
+            enable = true,    -- Habilita refresco automático
+            --interval = 1000,  -- Verifica cambios cada 1 segundo (opcional)
+            max_items = 100,  -- Límite de items a monitorear
+          },
+          -- Opcional: Mapeos adicionales útiles
+          window = {
+            mappings = {
+              ["R"] = "refresh",
+              ["a"] = "add",
+              ["d"] = "delete",
+              ["r"] = "rename",
+            }
+          }
         },
       })
     end,
