@@ -1,5 +1,6 @@
 return { 
 	'nvim-mini/mini.animate',
+	event = "VeryLazy",
 	version = false,
 	opts = {
 		-- Vertical scroll
