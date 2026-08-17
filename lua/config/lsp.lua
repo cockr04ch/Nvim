@@ -1,3 +1,2 @@
-vim.lsp.enable("lua_ls");
-vim.lsp.enable("rust_analyzer");
-vim.lsp.enable("tailwindcss");
+-- LSP se configura automáticamente via mason-lspconfig
+-- Ver plugins/mason-lspconfig.lua para handlers custom
